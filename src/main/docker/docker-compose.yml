@@ -17,6 +17,8 @@ services:
     environment:
       # le cambiamos el password al usuario de postgres
       - POSTGRES_PASSWORD=secret
+    ports:
+      - "5432:5432" 
     volumes:
       - ../../postgres:/var/lib/postgresql/data
   rabbitmq:
